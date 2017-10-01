@@ -649,8 +649,8 @@ void get_command()
     return;
   if (serial_count!=0)
   {
-    if (millis() - lastSerialCommandTime < 5000)
-      return;
+//    if (millis() - lastSerialCommandTime < 5000)
+//      return;
     serial_count = 0;
   }
   if (card.pause)

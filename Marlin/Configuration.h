@@ -335,11 +335,11 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define min_software_endstops true // If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 // Travel limits after homing
-#define X_MAX_POS 230
+#define X_MAX_POS 205
 #define X_MIN_POS 0
-#define Y_MAX_POS 224.5
+#define Y_MAX_POS 205
 #define Y_MIN_POS 0
-#define Z_MAX_POS 230
+#define Z_MAX_POS 201
 #define Z_MIN_POS 0
 
 #define X_MAX_LENGTH (X_MAX_POS - X_MIN_POS)
@@ -363,7 +363,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,80.0,200,282}  // default steps per unit for ultimaker2
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,80.0,400,760*1.1}  
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 40, 45}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
@@ -409,16 +409,16 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define ABS_PREHEAT_FAN_SPEED 0     // Insert Value between 0 and 255
 
 //LCD and SD support
-//#define ULTRA_LCD  //general lcd support, also 16x2
+#define ULTRA_LCD  //general lcd support, also 16x2
 //#define DOGLCD  // Support for SPI LCD 128x64 (Controller ST7565R graphic Display Family)
 #define SDSUPPORT // Enable SD Card Support in Hardware Console
 //#define SDSLOW // Use slower SD transfer mode (not normally needed - uncomment if you're getting volume init error)
 
 //#define ULTIMAKERCONTROLLER //as available from the ultimaker online store.
 //#define ULTIBOARD_V2_CONTROLLER //128x64 pixel Ultimaker OLED LCD panel
-#define ENABLE_ULTILCD2 //128x64 pixel display in the Ultimaker 2, with new menus. Note: For compiling with Arduino you need to remove the "SIGNAL(TWI_vect)" function from "libraries/Wire/utility/twi.c"
-//#define ULTIPANEL  //the ultipanel as on thingiverse
-
+//#define ENABLE_ULTILCD2 //128x64 pixel display in the Ultimaker 2, with new menus. Note: For compiling with Arduino you need to remove the "SIGNAL(TWI_vect)" function from "libraries/Wire/utility/twi.c"
+#define ULTIPANEL  //the ultipanel as on thingiverse
+#define NEWPANEL
 // The RepRapDiscount Smart Controller (white PCB)
 // http://reprap.org/wiki/RepRapDiscount_Smart_Controller
 //#define REPRAP_DISCOUNT_SMART_CONTROLLER
